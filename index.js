@@ -3,11 +3,11 @@ const cors = require('cors');
 const routerApi = require('./routes');
 const { logErrors, errorHanlder, boomErrorHanlder } = require('./middlewares/errorHandler');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const whitelist = ['http://127.0.0.1:5500/', 'about:blank'];
+const whitelist = ['http://localhost:8080/', 'about:blank'];
 const options = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin) || !origin) {
@@ -17,8 +17,6 @@ const options = {
     }
   }
 }
-
-
 
 app.get('/', (req, res) => {
   res.send('Hello, this is my server in express');

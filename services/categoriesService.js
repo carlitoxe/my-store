@@ -16,7 +16,6 @@ class CategoriesService {
     }
   }
 
-
   create() {
 
   }

@@ -20,11 +20,11 @@ router.get('/:id',
   //middleware creator
   validatorHandler(getProductSchema, 'params'),
   async (req, res, next) => {
-try {
+  try {
   const { id } = req.params;
   const product = await service.findOne(id);
   res.json(product);
-} catch (error) {
+  } catch (error) {
   next(error);
   }
 })
