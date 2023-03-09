@@ -1,6 +1,6 @@
 # my-store
 
-Project from: Backend with Node.js: API REST with Express.js. [Platzi Course](https://platzi.com/cursos/backend-nodejs/)
+Project from: Backend with Node.js: API REST with Express.js. [Link to the Platzi Course](https://platzi.com/cursos/backend-nodejs/)
 
 ## Run
 
